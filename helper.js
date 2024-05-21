@@ -58,7 +58,7 @@ function generateExampleRowCross(table_row, base_path, filename_ext, col_offset)
 
 function generateTable1Vggsound(tableId) {  
   let table = document.getElementById(tableId);  
-  let name = ['_SrU3mfTPYg_000032.wav', '_wNC03n2xmg_000211.wav', 'jJ6FWcy7B6M_000052.wav', 'RpGRpTpEHTs_000109.wav', 'ZGYQX-172io_000022.wav']
+  let name = ['gSrU3mfTPYg_000032.wav', 'gwNC03n2xmg_000211.wav', 'jJ6FWcy7B6M_000052.wav', 'RpGRpTpEHTs_000109.wav', 'ZGYQX-172io_000022.wav']
   let models = ['gt', 'gt_voc', 'diff-foley', 'ours'];  
   
   for (var i = 0; i < 5; i++) {  
