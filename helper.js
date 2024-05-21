@@ -41,95 +41,7 @@ function generateExampleRowCross(table_row, base_path, filename_ext, col_offset)
   }
 }
 
-function generateStyle(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_gt.wav', '_prompt.wav', '_yourtts.wav', '_medium.wav'];
-  for (var i = 0; i < 7; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/style/' + i, ext, 0);
-  }
-}
-
-function generateEnergy(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_all.txt', '_gt.wav', '_medium.wav'];
-
-  for (var i = 0; i < 6; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/energy/' + i, ext, 0);
-  }
-}
-
-function generateSpeed(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_all.txt', '_gt.wav', '_base.wav','_medium.wav','_large.wav'];
-  for (var i = 0; i < 6; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/speed/' + i, ext, 0);
-  }
-}
-
-function generateEmotion(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_gt.wav', '_prompt.wav', '_yourtts.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 5; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/emotion/' + i, ext, 0);
-  }
-}
-
-function generateRegionAdd(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_raw.txt', '_new.txt', '_gt.wav', '_se.wav', '_a3t.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 4; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/Region-based/add/' + i, ext, 0);
-  }
-}
-
-function generateRegionDelete(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_raw.txt', '_new.txt', '_gt.wav', '_se.wav', '_a3t.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 4; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/Region-based/delete/' + i, ext, 0);
-  }
-}
-
-function generateRegionReplace(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_raw.txt', '_new.txt', '_gt.wav', '_se.wav', '_a3t.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 4; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/Region-based/replace/' + i, ext, 0);
-  }
-}
-
-function generateFreeRegionAdd(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_raw.txt', '_new.txt', '_gt.wav', '_se.wav', '_a3t.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 4; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/Region_free/add/' + i, ext, 0);
-  }
-}
-
-function generateFreeRegionDelete(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_raw.txt', '_new.txt', '_gt.wav', '_se.wav', '_a3t.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 4; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/Region_free/delete/' + i, ext, 0);
-  }
-}
-
-function generateFreeRegionReplace(tableId) {
-  let table = document.getElementById(tableId);
-  let ext = ['_txt.txt', '_raw.txt', '_new.txt', '_gt.wav', '_se.wav', '_a3t.wav', '_base.wav','_medium.wav','_large.wav'];
-
-  for (var i = 0; i < 4; i++) {
-    generateExampleRow(table.rows[1 + i], 'data/Region_free/replace/' + i, ext, 0);
-  }
-}
-
-function generatePipeline(tableId) {  
+function generateTable1Vggsound(tableId) {  
   let table = document.getElementById(tableId);  
   let ext = ['_gt.wav', '_emotion.wav', '_style.wav', '_speed.wav','_energy.wav','_semantic.wav'];  
   let ext1 = ['_gt.txt','_emotion.txt','_style.txt','_speed.txt','_energy.txt','_semantic.txt']  
@@ -143,16 +55,66 @@ function generatePipeline(tableId) {
   } 
 } 
 
-generateStyle('style-conversion-table')
-generateEnergy('Energy-conversion-table')
-generateSpeed('Speed-conversion-table')
-generateEmotion('emotion-conversion-table')
-generateRegionAdd('add-region-based-table')
-generateRegionDelete('delete-region-based-table')
-generateRegionReplace('replace-region-based-table')
-generateFreeRegionAdd('add-region-free-table')
-generateFreeRegionDelete('delete-region-free-table')
-generateFreeRegionReplace('replace-region-free-table')
-generatePipeline('pipeline-table')
+function generateTable1Landscape(tableId) {  
+  let table = document.getElementById(tableId);  
+  let ext = ['_gt.wav', '_emotion.wav', '_style.wav', '_speed.wav','_energy.wav','_semantic.wav'];  
+  let ext1 = ['_gt.txt','_emotion.txt','_style.txt','_speed.txt','_energy.txt','_semantic.txt']  
+  
+  for (var i = 0; i < 4; i++) {  
+    if (i % 2 === 0) {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext, 0);  
+    } else {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext1, 0);  
+    }  
+  } 
+} 
+
+function generateTable2AIST(tableId) {  
+  let table = document.getElementById(tableId);  
+  let ext = ['_gt.wav', '_emotion.wav', '_style.wav', '_speed.wav','_energy.wav','_semantic.wav'];  
+  let ext1 = ['_gt.txt','_emotion.txt','_style.txt','_speed.txt','_energy.txt','_semantic.txt']  
+  
+  for (var i = 0; i < 4; i++) {  
+    if (i % 2 === 0) {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext, 0);  
+    } else {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext1, 0);  
+    }  
+  } 
+} 
+
+function generateTable2YT8M(tableId) {  
+  let table = document.getElementById(tableId);  
+  let ext = ['_gt.wav', '_emotion.wav', '_style.wav', '_speed.wav','_energy.wav','_semantic.wav'];  
+  let ext1 = ['_gt.txt','_emotion.txt','_style.txt','_speed.txt','_energy.txt','_semantic.txt']  
+  
+  for (var i = 0; i < 4; i++) {  
+    if (i % 2 === 0) {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext, 0);  
+    } else {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext1, 0);  
+    }  
+  } 
+} 
+
+function generateTable2Landscape(tableId) {  
+  let table = document.getElementById(tableId);  
+  let ext = ['_gt.wav', '_emotion.wav', '_style.wav', '_speed.wav','_energy.wav','_semantic.wav'];  
+  let ext1 = ['_gt.txt','_emotion.txt','_style.txt','_speed.txt','_energy.txt','_semantic.txt']  
+  
+  for (var i = 0; i < 4; i++) {  
+    if (i % 2 === 0) {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext, 0);  
+    } else {  
+      generateExampleRow(table.rows[1 + i], 'data/pipeline/' + i, ext1, 0);  
+    }  
+  } 
+} 
+
+generateTable1Vggsound('vggsound1-table')
+generateTable1Landscape('table1-landscape')
+generateTable2AIST('table2-aist')
+generateTable2YT8M('table2-yt8m')
+generateTable2Landscape('table2-landscape')
 
 
