@@ -1,0 +1,1 @@
+Mirror the style nuances present in the given speech to capture its sentiment.(Prompt use:friendly style)
