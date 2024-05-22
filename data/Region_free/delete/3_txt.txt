@@ -1,1 +1,0 @@
-Delete the word item 'made' in the sentence. 

@@ -1,1 +1,0 @@
-Reduce the speech’s audio volume to gentle volume.

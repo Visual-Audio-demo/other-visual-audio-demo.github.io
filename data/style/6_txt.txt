@@ -1,1 +1,0 @@
-Match the emotional delivery to that of the referenced speech, capturing its sentiment.
