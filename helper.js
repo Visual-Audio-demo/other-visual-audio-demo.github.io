@@ -8,24 +8,6 @@ function createVideoHTML(path) {
       path +  
       '" type="video/mp4">Your browser does not support the video tag.</video>';  
 }
-function generateExampleRowNew(table_row, base_path, filename_ext, models, col_offset) {
-  for (var i = 0; i < models.length; i++) {
-    let p = base_path + models[i] + '/' + filename_ext;  
-    let cell = table_row.cells[col_offset + i];  
-  
-    if (p.endsWith('.txt')) {  
-      // 使用同步XMLHttpRequest（不推荐，但为了示例保持一致）  
-      var req = new XMLHttpRequest();  
-      req.open("GET", p, false);  
-      req.send(null);  
-      cell.innerHTML = '<font size="-1">' + req.responseText + '</font>';  
-    } else if (p.endsWith('.wav') || p.endsWith('.mp3')) { // 假设音频文件是wav或mp3格式  
-      cell.innerHTML = cell.innerHTML + createAudioHTML(p);  
-    } else if (p.endsWith('.mp4')) { // 假设视频文件是mp4格式  
-      cell.innerHTML = cell.innerHTML + createVideoHTML(p);  
-    }  
-  }
-}
 function generateExampleRowNewVideo(table_row, base_path, filename_ext, models, col_offset) {
   let p = base_path + models[0] + '/' + filename_ext + '.mp4';  
   let cell = table_row.cells[col_offset + 0]; 
