@@ -68,7 +68,7 @@ function generateTable1Vggsound(tableId) {
 
 function generateTable1Landscape(tableId) {  
   let table = document.getElementById(tableId);  
-  let name = ['1Ef9CAZ3OrQ#9993#10003.wav', '1i79N_6wuIA#3290#3300.wav', '2dkilldNRJE#3717#3727.wav', 'g_2ioOlo0u5I#19826#19836.wav','MZjZEVgQmno#21#31.wav'];  
+  let name = ['1Ef9CAZ3OrQ_9993_10003.wav', '1i79N_6wuIA_3290_3300.wav', '2dkilldNRJE_3717_3727.wav', 'g_2ioOlo0u5I_19826_19836.wav','MZjZEVgQmno_21_31.wav'];  
   let models = ['gt', 'gt_voc', 'diff-foley','mmdiffusion', 'ours']  
   
   for (var i = 0; i < 4; i++) {  
@@ -98,7 +98,7 @@ function generateTable2YT8M(tableId) {
 
 function generateTable2Landscape(tableId) {  
   let table = document.getElementById(tableId);  
-  let name = ['1Ef9CAZ3OrQ#9993#10003_0.wav', '1i79N_6wuIA#3290#3300_0.wav', 'g_2ioOlo0u5I#19826#19836_0.wav', 'g-WrD5DwI6_4#8410#8420_0.wav','MZjZEVgQmno#21#31_0.wav'];  
+  let name = ['1Ef9CAZ3OrQ_9993_10003_0.wav', '1i79N_6wuIA_3290_3300_0.wav', 'g_2ioOlo0u5I_19826_19836_0.wav', 'g-WrD5DwI6_4_8410_8420_0.wav','MZjZEVgQmno_21_31_0.wav'];  
   let models = ['lora','all', 'bs'] 
   
   for (var i = 0; i < 4; i++) {  
