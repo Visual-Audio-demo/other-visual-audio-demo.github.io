@@ -4,7 +4,7 @@ function createAudioHTML(path) {
       ' type="audio/wav">Your browser does not support the audio element.</audio>';
 }
 function createVideoHTML(path) {  
-  return '<video controls class="px-1" width="320" height="240"> <source src="' +  
+  return '<video controls class="px-1" width="280" height="210"> <source src="' +  
       path +  
       '" type="video/mp4">Your browser does not support the video tag.</video>';  
 }
