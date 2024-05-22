@@ -4,22 +4,6 @@ function createAudioHTML(path) {
       ' type="audio/wav">Your browser does not support the audio element.</audio>';
 }
 
-
-function generateExampleRow(table_row, base_path, filename_ext, col_offset) {
-  for (var i = 0; i < filename_ext.length; i++) {
-    let p = base_path + filename_ext[i];
-    let cell = table_row.cells[col_offset + i];
-    // console.log(table_row.cells.length)
-    if (p.endsWith('txt')) {
-      var req = new XMLHttpRequest();
-      req.open("GET", p, false);
-      req.send(null);
-      cell.innerHTML = '<font size="-1">' + req.responseText + '</font>';
-    } else {
-      cell.innerHTML = cell.innerHTML + createAudioHTML(p);
-    }
-  }
-}
 function generateExampleRowNew(table_row, base_path, filename_ext, models, col_offset) {
   for (var i = 0; i < models.length; i++) {
     let p = base_path + models[i] + '/' + filename_ext;
