@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InstructSpeech</title>
+    <title>visual-audio-demo</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -25,7 +25,7 @@
   <body>
     <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
       <div class="text-center">
-        <h3>InstructSpeech:Following Speech Editing Instructions via Large Language Models</h3>
+        <h3>Video-Guided Universal Audio Generation with Mixture-Of-Expert Transformer at Scale </h3>
         <!-- <p class="lead fw-bold">
           |<a
             href="https://arxiv.org/abs/2302.03540"
@@ -45,7 +45,7 @@
       </div>
       <p>
         <b>Abstract.</b>  
-        Instruction-guided speech editing aims to follow the user’s natural language instruction to manipulate the semantic and acoustic attributes of a speech. In this work, we construct triplet paired data (instruction, input speech, output speech) to alleviate data scarcity and train a multi-task large language model named InstructSpeech. To mitigate the challenges of accurately executing user’s instructions, we 1) introduce the learned task embeddings with a fine-tuned Flan-T5-XL to guide the generation process towards the correct generative task; 2) include an extensive and diverse set of speech editing and speech processing tasks to enhance model capabilities; 3) investigate chainof- thought reasoning for free-form semantic content editing; and 4) propose a hierarchical adapter that effectively updates a small portion of parameters for generalization to new tasks. To assess instruction speech editing in greater depth, we introduce a benchmark evaluation with contrastive instruction-speech pretraining (CISP) to test the speech quality and instruction-speech alignment faithfulness. Experimental results demonstrate that InstructSpeech achieves state-of-the-art results in eleven tasks, for the first time unlocking the ability to edit the acoustic and semantic attributes of speech following a user’s instruction.
+        We propose a model with mixture of experts to scale video-to-audio generation. To tackle the challenges of modeling long audio signals, we propose flow-matching transformers to approximate the velocity vector field, which obtain data samples in the probability flow ordinary differential equation (ODE). To scale in terms of model capability, we stack mixture-of-experts (MoE) with both frequency-MoE and time-MoE layers, respectively for sounding semantics in specific audio frequency regions or denoising timesteps. Together with the power of contrastive video-audio pretraining (CVAP) and high-fidelity semantic compression, we achieve a deep level of video understanding with synchronized and high-fidelity generation. It even generalizes well to open-domain data (e.g., dancing video, or music video), or in multiple user-defined visual-guided audio generation tasks (e.g., continuation and interpolation), which empowers humans to create rich and diverse audio content with personalized transfer and fine-grained control.
       </p>
     </div>
 
@@ -67,11 +67,11 @@
     <div>
     <p style="text-align: left;">
     <ul style="list-style: outside none none !important;">
-       <li><a href="#table1-vggsound" class="btn border-white bg-white fw-bold">Acoustic attribute editing</a></li>
-       <li><a href="#table1-landscape" class="btn border-white bg-white fw-bold">Region-based semantic editing</a></li>
-       <li><a href="#table2-aist" class="btn border-white bg-white fw-bold">Free-form semantic editing</a></li>
-       <li><a href="#table2-yt8m" class="btn border-white bg-white fw-bold">Multi-turn editing</a></li>
-       <li><a href="#table2-landscape" class="btn border-white bg-white fw-bold">Multi-turn editing</a></li>
+       <li><a href="#table1-vggsound" class="btn border-white bg-white fw-bold">Table1-Vggsound</a></li>
+       <li><a href="#table1-landscape" class="btn border-white bg-white fw-bold">Table1-Landscape</a></li>
+       <li><a href="#table2-aist" class="btn border-white bg-white fw-bold">Table2-Aist</a></li>
+       <li><a href="#table2-yt8m" class="btn border-white bg-white fw-bold">Table2-Yt8m</a></li>
+       <li><a href="#table2-landscape" class="btn border-white bg-white fw-bold">Table2-Landscape</a></li>
        
     </ul>
     </p>
@@ -79,10 +79,10 @@
 </div>
     <!-- table1-vggsound -->
     <div class="container shadow p-5 mb-5 bg-white rounded">
-      <h3>Multi-turn editing<a id="table1-vggsound"/></h3>
+      <h3>Vggsound<a id="table1-vggsound"/></h3>
 
       <p style="margin-top: 2em">
-        In this section, we provide the generated audio samples in our multi-turn editing.
+        In this section, we provide the generated audio samples in Vggsound.
               </p>
       <div class="container pt-3 table-responsive">
         <table
@@ -110,10 +110,10 @@
 
     <!-- table1-landscape -->
     <div class="container shadow p-5 mb-5 bg-white rounded">
-      <h3>Multi-turn editing<a id="table1-landscape"/></h3>
+      <h3>Landscape<a id="table1-landscape"/></h3>
 
       <p style="margin-top: 2em">
-        In this section, we provide the generated audio samples in our multi-turn editing.
+        In this section, we provide the generated audio samples in Landscape.
               </p>
       <div class="container pt-3 table-responsive">
         <table
@@ -142,10 +142,10 @@
 
     <!-- table2-aist -->
     <div class="container shadow p-5 mb-5 bg-white rounded">
-      <h3>Multi-turn editing<a id="table2-aist"/></h3>
+      <h3>AIST<a id="table2-aist"/></h3>
 
       <p style="margin-top: 2em">
-        In this section, we provide the generated audio samples in our multi-turn editing.
+        In this section, we provide the generated audio samples in AIST.
               </p>
       <div class="container pt-3 table-responsive">
         <table
@@ -174,10 +174,10 @@
 
     <!-- table2-yt8m -->
     <div class="container shadow p-5 mb-5 bg-white rounded">
-      <h3>Multi-turn editing<a id="table2-yt8m"/></h3>
+      <h3>YT8M<a id="table2-yt8m"/></h3>
 
       <p style="margin-top: 2em">
-        In this section, we provide the generated audio samples in our multi-turn editing.
+        In this section, we provide the generated audio samples in yt8m.
               </p>
       <div class="container pt-3 table-responsive">
         <table
@@ -204,12 +204,12 @@
       </div>
     </div>
 
-    <!-- table2-yt8m -->
+    <!-- table2-landscape -->
     <div class="container shadow p-5 mb-5 bg-white rounded">
-      <h3>Multi-turn editing<a id="table2-landscape"/></h3>
+      <h3>Landscape<a id="table2-landscape"/></h3>
 
       <p style="margin-top: 2em">
-        In this section, we provide the generated audio samples in our multi-turn editing.
+        In this section, we provide the generated audio samples in landscape.
               </p>
       <div class="container pt-3 table-responsive">
         <table
