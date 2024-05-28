@@ -19,7 +19,7 @@ function generateExampleRowNewVideo(table_row, base_path, filename_ext, models, 
   }
 }
 function generateExampleRowVideo(table_row, base_path, filename_ext, models, col_offset) {
-  for (var i = 1; i < models.length; i++) {
+  for (var i = 0; i < models.length; i++) {
     let p = base_path + models[i] + '/' + filename_ext + '.mp4'; 
     let cell = table_row.cells[col_offset + i];  
     cell.innerHTML = cell.innerHTML + createVideoHTML(p); 
