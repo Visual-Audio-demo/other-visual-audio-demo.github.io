@@ -8,16 +8,16 @@ function createVideoHTML(path) {
       path +  
       '" type="video/mp4">Your browser does not support the video tag.</video>';  
 }
-function generateExampleRowNewVideo(table_row, base_path, filename_ext, models, col_offset) {
-  let p = base_path + models[0] + '/' + filename_ext + '.mp4';  
-  let cell = table_row.cells[col_offset + 0]; 
-  cell.innerHTML = cell.innerHTML + createVideoHTML(p);
-  for (var i = 1; i < models.length; i++) {
-    let p = base_path + models[i] + '/' + filename_ext + '.wav';  
-    let cell = table_row.cells[col_offset + i];  
-    cell.innerHTML = cell.innerHTML + createAudioHTML(p);  
-  }
-}
+// function generateExampleRowNewVideo(table_row, base_path, filename_ext, models, col_offset) {
+//   let p = base_path + models[0] + '/' + filename_ext + '.mp4';  
+//   let cell = table_row.cells[col_offset + 0]; 
+//   cell.innerHTML = cell.innerHTML + createVideoHTML(p);
+//   for (var i = 1; i < models.length; i++) {
+//     let p = base_path + models[i] + '/' + filename_ext + '.wav';  
+//     let cell = table_row.cells[col_offset + i];  
+//     cell.innerHTML = cell.innerHTML + createAudioHTML(p);  
+//   }
+// }
 function generateExampleRowVideo(table_row, base_path, filename_ext, models, col_offset) {
   for (var i = 0; i < models.length; i++) {
     let p = base_path + models[i] + '/' + filename_ext + '.mp4'; 
