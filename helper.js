@@ -100,7 +100,7 @@ function generateTable3Vggsound(tableId) {
 } 
 function generateTable4Vggsound(tableId) {  
   let table = document.getElementById(tableId);  
-  let name = ['g__uEjp7_UDw_000100', 'g_5A8lI5UEgo_000030', 'g_olx6WTK2BA_000000', 'g_rgOfS3NOSY_000108', 'ZGYQX-g_RLsXrr0fQo_000080']
+  let name = ['g__uEjp7_UDw_000100', 'g_5A8lI5UEgo_000030', 'g_olx6WTK2BA_000000', 'g_rgOfS3NOSY_000108', 'g_RLsXrr0fQo_000080']
   let models = ['mel_vis', 'gt_voc', 'inpait_07_load', 'inpaint_012_concat'];  
   
   for (var i = 0; i < 5; i++) {  
